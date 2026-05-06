@@ -5,7 +5,6 @@
 package tp2ej8;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
  *
@@ -19,11 +18,11 @@ public class Invernadero {
     ArrayList<LoteSiembra> lotes;
         
     //CONSTRUCTORES
-    public Invernadero(String nombre, int codigo, ClimaEnum clima){ //recibe
+    public Invernadero(String nombre, int codigo, ClimaEnum clima, int capacidadMaxima){ //recibe
         this.nombre = nombre; // ASIGNA lo recibido al atributo del objeto
         this.codigo = codigo;
         this.clima = clima;
-        this.capacidadMaxima = 5;
+        this.capacidadMaxima = capacidadMaxima;
         this.lotes = new ArrayList<>();
     }
     //LoteSiembra nuevoLote = new LoteSiembra();
