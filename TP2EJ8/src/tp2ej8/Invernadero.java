@@ -4,6 +4,9 @@
  */
 package tp2ej8;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author Jazmín
@@ -13,58 +16,42 @@ public class Invernadero {
     int codigo;
     ClimaEnum clima;
     int capacidadMaxima=5;
-    ArrayList<LoteSiembra> lote;
-    
-    
+    ArrayList<LoteSiembra> lotes;
+        
     //CONSTRUCTORES
-    public Invernadero(String nombre){ //recibe
+    public Invernadero(String nombre, int codigo, ClimaEnum clima){ //recibe
         this.nombre = nombre; // ASIGNA lo recibido al atributo del objeto
-    }
-    public Invernadero(int codigo){ //recibe
         this.codigo = codigo;
-    }
-    public Invernadero(ClimaEnum clima){ //recibe
         this.clima = clima;
-    }
-    public Invernadero(){ //recibe
         this.capacidadMaxima = 5;
+        this.lotes = new ArrayList<>();
     }
+    //LoteSiembra nuevoLote = new LoteSiembra();
+    
     
     //GETs
-    public String getNombre(String nombre){
+    public String getNombre(){
         return nombre;  // DEVUELVE
     }
-    public int getCodigo(int numero){
-        return numero;  // DEVUELVE
+    public int getCodigo(){
+        return codigo;  // DEVUELVE
     }
-    public ClimaEnum getClima(ClimaEnum clima){
+    public ClimaEnum getClima(){
         return clima;  // DEVUELVE
     }
-    public int getCapacidadMaxima(int capacidadMaxima){
+    public int getCapacidadMaxima(){
         return capacidadMaxima;  // DEVUELVE
     }
-   
+    
     public int getDisponible(){
-        int tamActual = lote.size();
-        int diferencia=capacidadMaxima - tamActual;
-        
-        return diferencia;
+        int tamActual = lotes.size();
+        return capacidadMaxima - tamActual;
     }
-    
-    //  ):
-    public void Invernadero(){
-        //agregar
-    }      
-            
-            
-    
-    //met
-    public void agregarNuevoLote(ArrayList<LoteSiembra> lote){
-        LoteSiembra nuevoLote = new LoteSiembra();
-        nuevoLote.idLote(lote.size());
-        nuevoLote.
-        lote.add(nuevoLote);
+
+    public void asignarLote(LoteSiembra lote){
+        if(lotes.size()<capacidadMaxima){
+            lotes.add(lote); //agregar nuevo lote a la lista
+            lote.setInvernaderoAsignado(this); //actualizo referencia
+        }
     }
-    
-   
 }
