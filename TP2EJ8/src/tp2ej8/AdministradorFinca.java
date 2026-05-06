@@ -18,10 +18,10 @@ public class AdministradorFinca {
     
     
     public Invernadero obtenerMejorInvernadero(ClimaEnum c){
-        int mayorDisponibilidad = -1;
+        int mayorDisponibilidad = 0;
         int indicador = -1;
-        for (int i=0; i<listaFinca.size(); i++){
-            if(listaFinca.get(i).getClima() == c ){
+        for (int i=0; i < listaFinca.size(); i++){
+            if(listaFinca.get(i).getClima() == c ){ // !!!
                 if(listaFinca.get(i).getDisponible() > mayorDisponibilidad){
                     mayorDisponibilidad=listaFinca.get(i).getDisponible();
                     indicador=i;

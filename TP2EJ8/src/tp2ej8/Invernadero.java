@@ -14,7 +14,7 @@ public class Invernadero {
     String nombre;
     int codigo;
     ClimaEnum clima;
-    int capacidadMaxima=5;
+    int capacidadMaxima;
     ArrayList<LoteSiembra> lotes;
         
     //CONSTRUCTORES
