@@ -10,7 +10,7 @@ package tp2ej8;
  * @author Jazmín
  */
 public class LoteSiembra{
-    private int idLote;
+    private int idLote=1;
     private String especie;
     private ClimaEnum climaRequerido;
     
@@ -22,6 +22,10 @@ public class LoteSiembra{
     this.especie = especie;
     this.climaRequerido = climaRequerido;
     }
+    
+    /*public void contadorId(int idLote){
+        this.idLote=idLote++;
+    }*/
     
     //G
     public int getIdLote(){
@@ -35,9 +39,6 @@ public class LoteSiembra{
     }
     
     //s
-    public void setIdLote(int idLote) {
-        this.idLote = idLote;
-    }
     public void setEspecie(String especie) {
     this.especie = especie;
     }

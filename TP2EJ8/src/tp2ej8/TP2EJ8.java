@@ -44,13 +44,17 @@ public class TP2EJ8 {
         
         //crea un ArrayList local en el main con 5 Lotes de Siembra en peligro.
         ArrayList<LoteSiembra> lotesPeligro = new ArrayList<>();
-         
-        lotesPeligro.add(new LoteSiembra(2, "Platano", ClimaEnum.TROPICAL));
-        lotesPeligro.add(new LoteSiembra(5, "Tomate", ClimaEnum.TROPICAL));
-        lotesPeligro.add(new LoteSiembra(4, "Olivo", ClimaEnum.SECO));
-        lotesPeligro.add(new LoteSiembra(7, "Trigo", ClimaEnum.TEMPLADO));
-        lotesPeligro.add(new LoteSiembra(6, "Arroz", ClimaEnum.TEMPLADO));
-         
+        
+        int id=1;
+        
+        lotesPeligro.add(new LoteSiembra(id++, "Platano", ClimaEnum.TROPICAL));
+        lotesPeligro.add(new LoteSiembra(id++, "Tomate", ClimaEnum.TROPICAL));
+        lotesPeligro.add(new LoteSiembra(id++, "Olivo", ClimaEnum.SECO));
+        lotesPeligro.add(new LoteSiembra(id++, "Trigo", ClimaEnum.TEMPLADO));
+        lotesPeligro.add(new LoteSiembra(id, "Arroz", ClimaEnum.TEMPLADO));
+        
+        System.out.println(lotesPeligro);
+        
         //Recorrer lista, obtenerMejorInvernadero() para buscar un refugio 
         for(int i=0; i<5; i++){
            LoteSiembra l=lotesPeligro.get(i);
@@ -58,7 +62,8 @@ public class TP2EJ8 {
            Invernadero inv = finca.obtenerMejorInvernadero(l.getClimaRequerido());
            if(inv != null){
                System.out.print("SALVADO! Lote " + l.getIdLote() + " de " + l.getEspecie());
-               System.out.println("asignado a Invernadero " + inv.getNombre());
+               System.out.println(" asignado a Invernadero " + inv.getNombre());
+               inv.lotes.add(l);
            }
            else{
                System.out.print("ALERTA! Lote " + l.getIdLote() + " de " + l.getEspecie());
