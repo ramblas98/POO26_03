@@ -8,6 +8,7 @@ import java.util.ArrayList;
 /**
  *
  * @author Jazmín
+ * 
  */
 public class Animacion {
     String titulo;
