@@ -22,14 +22,15 @@ public class LaptopGamer extends Portatil{
     public LaptopGamer(String tarjetaGrafica, Refrigeracion tipoDeRefrigeracion, int bateria, float
                        tamanoDePantalla){
         super(bateria,tamanoDePantalla);
+        super.asignarSistemaOperativo(SistemaOPerativo.CACHYOS);
         this.tarjetaGrafica = tarjetaGrafica;
         this.tipoDeRefrigeracion = tipoDeRefrigeracion;
         this.modoAltorendimiento = false;
     }
 
     public LaptopGamer(String tarjetaGrafica, Refrigeracion tipoDeRefrigeracion, int bateria, float
-            tamanoDePantalla,String procesador,int memoria,float almacenamiento){
-        super(bateria,tamanoDePantalla,procesador,memoria,almacenamiento);
+            tamanoDePantalla,String procesador,int memoria,float almacenamiento,SistemaOPerativo os){
+        super(bateria,tamanoDePantalla,procesador,memoria,almacenamiento,os);
         this.tarjetaGrafica = tarjetaGrafica;
         this.tipoDeRefrigeracion = tipoDeRefrigeracion;
         this.modoAltorendimiento = false;

@@ -4,6 +4,7 @@ public enum SistemaOPerativo {
     NONE,
     WINDOWS10,
     WINDOWS11,
+    REDHAT,
     UBUNTU,
     MINT,
     CACHYOS,

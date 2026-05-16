@@ -5,6 +5,7 @@ public class Computadora {
     protected int memoriaRam;
     protected float almacenamiento;
     private boolean botonDePrendido;
+    protected SistemaOPerativo os;
 
     public Computadora(){
         this.procesador = "AMD ryzen 7";
@@ -18,6 +19,10 @@ public class Computadora {
         this.memoriaRam = memoria;
         this.almacenamiento = almacenamiento;
         Apagado();
+    }
+
+    public void asignarSistemaOperativo(SistemaOPerativo os){
+        this.os = os;
     }
 
     public void Encender(){

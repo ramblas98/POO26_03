@@ -12,12 +12,14 @@ public class Portatil extends Computadora{
 
     public Portatil(int bateria, float tamanoPantalla){
         super();
+        super.asignarSistemaOperativo(SistemaOPerativo.WINDOWS10);
         this.bateria = bateria;
         this.tamanoPantalla = tamanoPantalla;
     }
 
-    public Portatil(int bateria, float tamanoPantalla, String procesador, int memoriaRam, float almacenamiento){
+    public Portatil(int bateria, float tamanoPantalla, String procesador, int memoriaRam, float almacenamiento, SistemaOPerativo os){
         super(procesador,memoriaRam,almacenamiento);
+        super.asignarSistemaOperativo(os);
         this.bateria = bateria;
         this.tamanoPantalla = tamanoPantalla;
     }
